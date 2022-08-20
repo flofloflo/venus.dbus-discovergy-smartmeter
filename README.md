@@ -8,7 +8,7 @@ The Python script cyclically reads data from Discoergy via the REST API and publ
 
 ### Configuration
 
-TDB
+Replace the contents in the discovergy-config.py with the actual values.
 
 ### Installation
 
