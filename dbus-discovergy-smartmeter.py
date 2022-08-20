@@ -5,6 +5,9 @@ Created by Ralf Zimmermann (mail@ralfzimmermann.de) in 2020.
 This code and its documentation can be found on: https://github.com/RalfZim/venus.dbus-fronius-smartmeter
 Used https://github.com/victronenergy/velib_python/blob/master/dbusdummyservice.py as basis for this service.
 Reading information from the Fronius Smart Meter via http REST API and puts the info on dbus.
+
+Changes based on script by user "twanka" from 
+https://www.photovoltaikforum.com/thread/156974-victron-ess-mit-rasberry-steuern-ohne-gx-ohne-em24-weil-die-leistungsbilanz-scho/?pageNo=15
 """
 try:
   import gobject  # Python 2.x
