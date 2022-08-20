@@ -12,22 +12,28 @@ Replace the contents in the discovergy-config.py with the actual values.
 
 ### Installation
 
-1. Copy the files to the /data folder on your venus:
+1. Install git on the Venus device:
 
-   - /data/dbus-discovergy-smartmeter/dbus-discovergy-smartmeter.py
-   - /data/dbus-discovergy-smartmeter/kill_me.sh
-   - /data/dbus-discovergy-smartmeter/service/run
+   1. Connect to root shell    
+   2. `opkg update` to update the package manager sources
+   3. `opkg install git` to install git
 
-2. Set permissions for files:
+2. Fetch this repository:
+
+   1. `cd /data`
+   2. `git clone https://github.com/flofloflo/venus.dbus-discovergy-smartmeter.git dbus-discovergy-smartmeter`
+
+3. Set permissions for files:
 
    `chmod 755 /data/dbus-discovergy-smartmeter/service/run`
 
    `chmod 744 /data/dbus-discovergy-smartmeter/kill_me.sh`
 
-3. Get two files from the [velib_python](https://github.com/victronenergy/velib_python) and install them on your venus:
+4. Get two files from the [velib_python](https://github.com/victronenergy/velib_python) and install them on your venus:
 
-   - /data/dbus-discovergy-smartmeter/vedbus.py
-   - /data/dbus-discovergy-smartmeter/ve_utils.py
+   1. `git clone https://github.com/victronenergy/velib_python.git`
+   2. `cp velib_python/vedbus.py dbus-discovergy-smartmeter/vedbus.py`
+   3. `cp velib_python/ve_utils.py dbus-discovergy-smartmeter/ve_utils.py`
 
 4. Add a symlink to the file /data/rc.local:
 
