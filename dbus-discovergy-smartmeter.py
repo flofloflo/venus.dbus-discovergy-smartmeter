@@ -64,7 +64,7 @@ class DbusDummyService:
 #                  "Scope=Device&DeviceId=0&DataCollection=MeterRealtimeData"
 #      meter_r = requests.get(url=meter_url) # request data from the Fronius PV inverter
 #      meter_data = meter_r.json() # convert JSON data
-      meter_url = "https://" + discovergy-config.USER + ":" + discovergy-config.PASSWORD + "@api.discovergy.com/public/v1/last_reading?meterId=" + discovergy-config.METER_ID
+      meter_url = "https://" + dconfig.USER + ":" + dconfig.PASSWORD + "@api.discovergy.com/public/v1/last_reading?meterId=" + dconfig.METER_ID
       meter_data = requests.get(meter_url).json() # convert JSON data
       meter_consumption = round(meter_data['values']['power']/1000,2)
       self._dbusservice['/Ac/Power'] = meter_consumption # positive: consumption, negative: feed into grid
