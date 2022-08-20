@@ -9,7 +9,7 @@ Reading information from the Fronius Smart Meter via http REST API and puts the 
 Changes based on script by user "twanka" from 
 https://www.photovoltaikforum.com/thread/156974-victron-ess-mit-rasberry-steuern-ohne-gx-ohne-em24-weil-die-leistungsbilanz-scho/?pageNo=15
 """
-import "discovergy-config"
+import dconfig
 try:
   import gobject  # Python 2.x
 except:
